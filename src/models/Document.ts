@@ -43,6 +43,7 @@ const DocumentSchema = new Schema<IDocument>(
     contentHash: {
       type: String,
       required: true,
+      unique: true,
     },
     metadata: {
       uploadDate: {
