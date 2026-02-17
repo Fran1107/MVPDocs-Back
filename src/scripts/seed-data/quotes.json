@@ -1,0 +1,385 @@
+{
+    "quotes": [
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4c5",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b4",
+            "position": {
+                "rawStart": 450,
+                "rawEnd": 520,
+                "plainStart": 425,
+                "plainEnd": 495,
+                "selectedText": "Siento que la ansiedad se ha vuelto mi compañera constante",
+                "contextBefore": "Honestamente, ha sido muy difícil. ",
+                "contextAfter": ". Hay días en los que me despierto y ya"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2a3"
+            ],
+            "memo": "Manifestación clara de ansiedad crónica. Usa metáfora de 'compañera' que indica normalización del síntoma.",
+            "color": "#EF4444",
+            "createdAt": "2024-01-20T10:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4c6",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b4",
+            "position": {
+                "rawStart": 750,
+                "rawEnd": 850,
+                "plainStart": 720,
+                "plainEnd": 820,
+                "selectedText": "La carga de trabajo es abrumadora, y a veces siento que no importa cuánto me esfuerce",
+                "contextBefore": "Hay días en los que me despierto ",
+                "contextAfter": ", nunca es suficiente."
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2a7",
+                "65a3d4e5f6a7b8c9d0e1f2a4"
+            ],
+            "memo": "Relación directa entre carga académica y sensación de insuficiencia. Posible perfeccionismo.",
+            "color": "#3B82F6",
+            "createdAt": "2024-01-20T10:15:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4c7",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b4",
+            "position": {
+                "rawStart": 1050,
+                "rawEnd": 1180,
+                "plainStart": 1020,
+                "plainEnd": 1150,
+                "selectedText": "También están las expectativas altas que tengo sobre mí misma. Vengo de una familia donde todos son profesionales exitosos",
+                "contextBefore": "Tenemos que leer muchísimo, escribir ensayos ",
+                "contextAfter": ", y siento que no puedo fallar."
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2a8"
+            ],
+            "memo": "Factor familiar como fuente de presión. Autoexigencia vinculada a contexto familiar de alto rendimiento.",
+            "color": "#2563EB",
+            "createdAt": "2024-01-20T10:30:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4c8",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b4",
+            "position": {
+                "rawStart": 1300,
+                "rawEnd": 1420,
+                "plainStart": 1270,
+                "plainEnd": 1390,
+                "selectedText": "Desde que empecé el posgrado, prácticamente no tengo vida social. Mis amigos de la licenciatura ya no me buscan",
+                "contextBefore": "Otra cosa es el aislamiento social. ",
+                "contextAfter": " porque siempre estoy ocupada"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b0"
+            ],
+            "memo": "Deterioro de red de apoyo social. Consecuencia directa de la dedicación al posgrado.",
+            "color": "#10B981",
+            "createdAt": "2024-01-20T11:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4c9",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b4",
+            "position": {
+                "rawStart": 1700,
+                "rawEnd": 1820,
+                "plainStart": 1670,
+                "plainEnd": 1790,
+                "selectedText": "El ejercicio físico me ayuda mucho cuando logro hacerlo. Salgo a correr dos o tres veces por semana",
+                "contextBefore": "Sí, he intentado varias cosas. ",
+                "contextAfter": ", y esos 30 minutos son como mi terapia"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b3"
+            ],
+            "memo": "Estrategia de afrontamiento efectiva. Ejercicio como regulador emocional. Frecuencia irregular sugiere barreras de implementación.",
+            "color": "#F59E0B",
+            "createdAt": "2024-01-21T09:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d0",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b4",
+            "position": {
+                "rawStart": 1950,
+                "rawEnd": 2050,
+                "plainStart": 1920,
+                "plainEnd": 2020,
+                "selectedText": "También he estado intentando mejorar mi organización del tiempo, usando una agenda digital",
+                "contextBefore": "y esos 30 minutos son como mi terapia. ",
+                "contextAfter": " donde planifico cada hora de mi día."
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b6"
+            ],
+            "memo": "Uso de herramientas de gestión del tiempo. Enfoque estructurado para manejar la carga.",
+            "color": "#92400E",
+            "createdAt": "2024-01-21T09:30:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d1",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b4",
+            "position": {
+                "rawStart": 2100,
+                "rawEnd": 2230,
+                "plainStart": 2070,
+                "plainEnd": 2200,
+                "selectedText": "Hace dos meses empecé a ir a terapia, fue difícil dar ese paso de búsqueda de ayuda profesional",
+                "contextBefore": "donde planifico cada hora de mi día. ",
+                "contextAfter": ", pero ha sido muy valioso."
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b5"
+            ],
+            "memo": "Reconocimiento de la necesidad de apoyo profesional. Barrera inicial superada. Valoración positiva del proceso.",
+            "color": "#B45309",
+            "createdAt": "2024-01-21T10:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d2",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b5",
+            "position": {
+                "rawStart": 520,
+                "rawEnd": 650,
+                "plainStart": 500,
+                "plainEnd": 630,
+                "selectedText": "La depresión es algo con lo que he lidiado desde hace varios años, pero durante el doctorado se ha intensificado",
+                "contextBefore": "Muy complicada, para ser honesto. ",
+                "contextAfter": ". Hay semanas enteras donde me cuesta"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2a5"
+            ],
+            "memo": "Condición preexistente agravada por el contexto académico. Importante para considerar vulnerabilidad previa.",
+            "color": "#7C2D12",
+            "createdAt": "2024-01-22T11:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d3",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b5",
+            "position": {
+                "rawStart": 720,
+                "rawEnd": 820,
+                "plainStart": 700,
+                "plainEnd": 800,
+                "selectedText": "la motivación baja hace que procrastine incluso las tareas más simples",
+                "contextBefore": "donde me cuesta levantarme de la cama, y ",
+                "contextAfter": ". El síndrome del impostor es brutal"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2a6"
+            ],
+            "memo": "Síntoma clave de depresión. Procrastinación como manifestación conductual de la falta de motivación.",
+            "color": "#991B1B",
+            "createdAt": "2024-01-22T11:30:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d4",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b5",
+            "position": {
+                "rawStart": 1250,
+                "rawEnd": 1380,
+                "plainStart": 1230,
+                "plainEnd": 1360,
+                "selectedText": "Nuestro laboratorio tiene presupuesto muy limitado, así que constantemente estamos luchando por conseguir materiales",
+                "contextBefore": "Principalmente la falta de recursos. ",
+                "contextAfter": " o acceso a equipos. Eso retrasa mi investigación"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2a9"
+            ],
+            "memo": "Factor estructural/institucional que afecta el desempeño. Fuente de frustración externa al estudiante.",
+            "color": "#1E40AF",
+            "createdAt": "2024-01-22T14:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d5",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b5",
+            "position": {
+                "rawStart": 1850,
+                "rawEnd": 1990,
+                "plainStart": 1830,
+                "plainEnd": 1970,
+                "selectedText": "Paso la mayor parte del tiempo en el laboratorio, muchas veces solo. Mis experimentos requieren que esté ahí hasta tarde",
+                "contextBefore": "El aislamiento social es otro factor importante. ",
+                "contextAfter": ", así que casi no veo a mi familia"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b0"
+            ],
+            "memo": "Aislamiento forzado por demandas del programa. Naturaleza del trabajo científico como factor contribuyente.",
+            "color": "#10B981",
+            "createdAt": "2024-01-22T14:30:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d6",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b5",
+            "position": {
+                "rawStart": 2300,
+                "rawEnd": 2430,
+                "plainStart": 2280,
+                "plainEnd": 2410,
+                "selectedText": "He encontrado algo de apoyo de pares en un grupo de estudiantes de doctorado que nos reunimos cada mes",
+                "contextBefore": "Voy al gimnasio del campus cuando puedo. ",
+                "contextAfter": " para compartir experiencias. Es reconfortante"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b1"
+            ],
+            "memo": "Grupo de apoyo entre pares como recurso valioso. Validación mutua de experiencias compartidas.",
+            "color": "#059669",
+            "createdAt": "2024-01-23T10:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d7",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b6",
+            "position": {
+                "rawStart": 680,
+                "rawEnd": 800,
+                "plainStart": 660,
+                "plainEnd": 780,
+                "selectedText": "Conozco gente que dice que es un ciclo natural, que siempre ha habido cambios en el clima",
+                "contextBefore": "Creo que hay mucha negación del problema todavía. ",
+                "contextAfter": ". No quieren aceptar que nosotros"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b7"
+            ],
+            "memo": "Ejemplo concreto de negacionismo climático en el entorno social del participante.",
+            "color": "#6B7280",
+            "createdAt": "2024-02-14T15:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d8",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b6",
+            "position": {
+                "rawStart": 1150,
+                "rawEnd": 1300,
+                "plainStart": 1130,
+                "plainEnd": 1280,
+                "selectedText": "Las empresas grandes son las que más contaminan, y solo el gobierno puede regularlas",
+                "contextBefore": "Para mí es claro que es responsabilidad gubernamental. ",
+                "contextAfter": ". Nosotros como individuos podemos reciclar"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b9"
+            ],
+            "memo": "Atribución de responsabilidad primaria al sector gubernamental. Minimización de impacto individual.",
+            "color": "#047857",
+            "createdAt": "2024-02-14T15:30:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4d9",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b6",
+            "position": {
+                "rawStart": 1520,
+                "rawEnd": 1680,
+                "plainStart": 1500,
+                "plainEnd": 1660,
+                "selectedText": "Si cada uno hace pequeños cambios, sí hace diferencia. Yo dejé de usar popotes de plástico, llevo mis bolsas reutilizables",
+                "contextBefore": "Creo que todos tenemos responsabilidad individual. ",
+                "contextAfter": " al súper, trato de no desperdiciar comida"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2b8"
+            ],
+            "memo": "Énfasis en acciones individuales concretas. Ejemplos específicos de cambio de hábitos.",
+            "color": "#059669",
+            "createdAt": "2024-02-14T16:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4e0",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b7",
+            "position": {
+                "rawStart": 550,
+                "rawEnd": 680,
+                "plainStart": 530,
+                "plainEnd": 660,
+                "selectedText": "al principio tuve mucha resistencia al cambio. Llevo 15 años enseñando de cierta manera",
+                "contextBefore": "Tengo que ser honesta, ",
+                "contextAfter": ", y cuando de repente te dicen que tienes"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2c1"
+            ],
+            "memo": "Reconocimiento honesto de resistencia inicial. Años de experiencia previa como factor de rigidez metodológica.",
+            "color": "#B91C1C",
+            "createdAt": "2024-02-20T12:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4e1",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b7",
+            "position": {
+                "rawStart": 850,
+                "rawEnd": 980,
+                "plainStart": 830,
+                "plainEnd": 960,
+                "selectedText": "Nos dieron los equipos, sí, pero la capacitación fue de dos horas un sábado por la mañana",
+                "contextBefore": "El problema principal es la falta de capacitación. ",
+                "contextAfter": ". Eso no es suficiente para aprender"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2c0"
+            ],
+            "memo": "Evidencia específica de capacitación inadecuada. Discrepancia entre inversión en equipo y en formación docente.",
+            "color": "#DC2626",
+            "createdAt": "2024-02-20T12:30:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4e2",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b7",
+            "position": {
+                "rawStart": 1380,
+                "rawEnd": 1510,
+                "plainStart": 1360,
+                "plainEnd": 1490,
+                "selectedText": "no todos los estudiantes tienen internet en casa, lo cual limita mucho el uso de plataformas educativas",
+                "contextBefore": "Aunque tenemos una sala de cómputo, ",
+                "contextAfter": " o tarea en línea."
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2c2"
+            ],
+            "memo": "Brecha digital como limitante estructural. Inequidad en acceso a recursos tecnológicos.",
+            "color": "#991B1B",
+            "createdAt": "2024-02-20T13:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4e3",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b7",
+            "position": {
+                "rawStart": 2050,
+                "rawEnd": 2200,
+                "plainStart": 2030,
+                "plainEnd": 2180,
+                "selectedText": "cuando incorporo, por ejemplo, Kahoot para repasar o videos interactivos, participan mucho más",
+                "contextBefore": "Cuando logro usar la tecnología bien, veo un mayor engagement estudiantil. Los chicos ",
+                "contextAfter": " que con el método tradicional."
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2c3"
+            ],
+            "memo": "Ejemplo concreto de herramienta efectiva. Gamificación como estrategia de engagement exitosa.",
+            "color": "#16A34A",
+            "createdAt": "2024-02-20T14:00:00.000Z"
+        },
+        {
+            "_id": "65a5f6a7b8c9d0e1f2a3b4e4",
+            "documentId": "65a4e5f6a7b8c9d0e1f2a3b7",
+            "position": {
+                "rawStart": 2350,
+                "rawEnd": 2480,
+                "plainStart": 2330,
+                "plainEnd": 2460,
+                "selectedText": "Puedo adaptar mejor mis clases a diferentes ritmos de aprendizaje",
+                "contextBefore": "También he notado flexibilidad pedagógica. ",
+                "contextAfter": ". Hay estudiantes que aprenden mejor visualmente"
+            },
+            "tags": [
+                "65a3d4e5f6a7b8c9d0e1f2c4"
+            ],
+            "memo": "Beneficio pedagógico de diferenciación. Personalización de la enseñanza facilitada por tecnología.",
+            "color": "#15803D",
+            "createdAt": "2024-02-20T14:30:00.000Z"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "_id": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "name": "Investigación Salud Mental Universitaria",
+            "description": "Estudio cualitativo sobre ansiedad y estrés en estudiantes de posgrado",
+            "createdAt": "2024-01-15T10:30:00.000Z"
+        },
+        {
+            "_id": "65a1b2c3d4e5f6a7b8c9d0e2",
+            "name": "Percepciones sobre Cambio Climático",
+            "description": "Análisis de discursos ciudadanos sobre medio ambiente",
+            "createdAt": "2024-02-10T11:00:00.000Z"
+        },
+        {
+            "_id": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "name": "Impacto de Tecnología en Educación",
+            "description": "Percepciones de docentes sobre herramientas digitales",
+            "createdAt": "2024-02-15T15:45:00.000Z"
+        }
+    ]
+}

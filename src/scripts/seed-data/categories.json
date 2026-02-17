@@ -1,0 +1,60 @@
+{
+    "categories": [
+        {
+            "_id": "65a2c3d4e5f6a7b8c9d0e1f2",
+            "name": "Factores Emocionales",
+            "description": "Aspectos relacionados con emociones y estados afectivos",
+            "color": "#EF4444",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "parentCategoryId": null
+        },
+        {
+            "_id": "65a2c3d4e5f6a7b8c9d0e1f3",
+            "name": "Factores Académicos",
+            "description": "Elementos relacionados con el ámbito académico y de estudio",
+            "color": "#3B82F6",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "parentCategoryId": null
+        },
+        {
+            "_id": "65a2c3d4e5f6a7b8c9d0e1f4",
+            "name": "Factores Sociales",
+            "description": "Relaciones interpersonales y contexto social",
+            "color": "#10B981",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "parentCategoryId": null
+        },
+        {
+            "_id": "65a2c3d4e5f6a7b8c9d0e1f5",
+            "name": "Estrategias de Afrontamiento",
+            "description": "Mecanismos para lidiar con situaciones difíciles",
+            "color": "#F59E0B",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "parentCategoryId": null
+        },
+        {
+            "_id": "65a2c3d4e5f6a7b8c9d0e1f6",
+            "name": "Percepciones Ambientales",
+            "description": "Opiniones y creencias sobre el medio ambiente",
+            "color": "#059669",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e2",
+            "parentCategoryId": null
+        },
+        {
+            "_id": "65a2c3d4e5f6a7b8c9d0e1f7",
+            "name": "Barreras Tecnológicas",
+            "description": "Obstáculos en el uso de tecnología",
+            "color": "#DC2626",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "parentCategoryId": null
+        },
+        {
+            "_id": "65a2c3d4e5f6a7b8c9d0e1f8",
+            "name": "Beneficios Percibidos",
+            "description": "Ventajas identificadas en el uso de herramientas",
+            "color": "#16A34A",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "parentCategoryId": null
+        }
+    ]
+}
