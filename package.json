@@ -7,7 +7,11 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "seed": "ts-node src/scripts/seedDatabase.ts",
+    "seed:clear": "ts-node src/scripts/seedDatabase.ts --clear",
+    "seed:dev": "NODE_ENV=development ts-node src/scripts/seedDatabase.ts --clear",
+    "seed:help": "ts-node src/scripts/seedDatabase.ts --help"
   },
   "keywords": [],
   "author": "",
