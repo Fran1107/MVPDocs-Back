@@ -1,0 +1,234 @@
+{
+    "tags": [
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2a3",
+            "name": "Ansiedad",
+            "color": "#EF4444",
+            "description": "Menciones de ansiedad, preocupación o nerviosismo",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f2",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 15,
+            "createdAt": "2024-01-16T10:00:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2a4",
+            "name": "Estrés académico",
+            "color": "#DC2626",
+            "description": "Presión relacionada con estudios y exámenes",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f2",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 12,
+            "createdAt": "2024-01-16T10:15:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2a5",
+            "name": "Depresión",
+            "color": "#7C2D12",
+            "description": "Síntomas o menciones de estado depresivo",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f2",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 8,
+            "createdAt": "2024-01-16T10:30:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2a6",
+            "name": "Motivación baja",
+            "color": "#991B1B",
+            "description": "Falta de motivación o desmotivación",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f2",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 10,
+            "createdAt": "2024-01-16T10:45:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2a7",
+            "name": "Carga de trabajo",
+            "color": "#3B82F6",
+            "description": "Referencias a exceso de trabajo o tareas",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f3",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 18,
+            "createdAt": "2024-01-17T09:00:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2a8",
+            "name": "Expectativas altas",
+            "color": "#2563EB",
+            "description": "Presión por expectativas propias o externas",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f3",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 9,
+            "createdAt": "2024-01-17T09:15:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2a9",
+            "name": "Falta de recursos",
+            "color": "#1E40AF",
+            "description": "Carencia de materiales, tiempo o apoyo",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f3",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 7,
+            "createdAt": "2024-01-17T09:30:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b0",
+            "name": "Aislamiento social",
+            "color": "#10B981",
+            "description": "Sentimientos de soledad o desconexión",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f4",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 11,
+            "createdAt": "2024-01-18T10:00:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b1",
+            "name": "Apoyo de pares",
+            "color": "#059669",
+            "description": "Soporte de compañeros o amigos",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f4",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 14,
+            "createdAt": "2024-01-18T10:15:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b2",
+            "name": "Conflictos familiares",
+            "color": "#047857",
+            "description": "Problemas o tensiones en el ámbito familiar",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f4",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 6,
+            "createdAt": "2024-01-18T10:30:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b3",
+            "name": "Ejercicio físico",
+            "color": "#F59E0B",
+            "description": "Uso de actividad física como estrategia",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f5",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 13,
+            "createdAt": "2024-01-19T11:00:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b4",
+            "name": "Meditación/mindfulness",
+            "color": "#D97706",
+            "description": "Prácticas de atención plena",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f5",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 5,
+            "createdAt": "2024-01-19T11:15:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b5",
+            "name": "Búsqueda de ayuda profesional",
+            "color": "#B45309",
+            "description": "Referencias a terapia o apoyo psicológico",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f5",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 9,
+            "createdAt": "2024-01-19T11:30:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b6",
+            "name": "Organización del tiempo",
+            "color": "#92400E",
+            "description": "Gestión y planificación temporal",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f5",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e1",
+            "usageCount": 16,
+            "createdAt": "2024-01-19T11:45:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b7",
+            "name": "Negación del problema",
+            "color": "#6B7280",
+            "description": "Evitación o minimización de situaciones",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f6",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e2",
+            "usageCount": 4,
+            "createdAt": "2024-02-11T10:00:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b8",
+            "name": "Responsabilidad individual",
+            "color": "#059669",
+            "description": "Énfasis en acciones personales",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f6",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e2",
+            "usageCount": 7,
+            "createdAt": "2024-02-11T10:15:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2b9",
+            "name": "Responsabilidad gubernamental",
+            "color": "#047857",
+            "description": "Expectativas sobre políticas públicas",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f6",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e2",
+            "usageCount": 10,
+            "createdAt": "2024-02-11T10:30:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2c0",
+            "name": "Falta de capacitación",
+            "color": "#DC2626",
+            "description": "Carencia de formación en tecnología",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f7",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "usageCount": 11,
+            "createdAt": "2024-02-16T09:00:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2c1",
+            "name": "Resistencia al cambio",
+            "color": "#B91C1C",
+            "description": "Rechazo a nuevas metodologías",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f7",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "usageCount": 8,
+            "createdAt": "2024-02-16T09:15:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2c2",
+            "name": "Acceso limitado",
+            "color": "#991B1B",
+            "description": "Problemas de conectividad o equipos",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f7",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "usageCount": 9,
+            "createdAt": "2024-02-16T09:30:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2c3",
+            "name": "Mayor engagement estudiantil",
+            "color": "#16A34A",
+            "description": "Aumento en participación de alumnos",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f8",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "usageCount": 15,
+            "createdAt": "2024-02-17T10:00:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2c4",
+            "name": "Flexibilidad pedagógica",
+            "color": "#15803D",
+            "description": "Adaptación de métodos de enseñanza",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f8",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "usageCount": 12,
+            "createdAt": "2024-02-17T10:15:00.000Z"
+        },
+        {
+            "_id": "65a3d4e5f6a7b8c9d0e1f2c5",
+            "name": "Ahorro de tiempo",
+            "color": "#166534",
+            "description": "Eficiencia en procesos administrativos",
+            "categoryId": "65a2c3d4e5f6a7b8c9d0e1f8",
+            "projectId": "65a1b2c3d4e5f6a7b8c9d0e3",
+            "usageCount": 10,
+            "createdAt": "2024-02-17T10:30:00.000Z"
+        }
+    ]
+}
