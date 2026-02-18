@@ -1,17 +1,29 @@
-import { Router } from 'express';
-import { Project } from '../models/Project.js';
+import { Router } from 'express'
+import { body, param } from 'express-validator'
+import { handleInputErrors } from '../middlewares/validation.js'
+import { ProjectController } from '../controllers/ProjectController.js'
 
-const router: Router = Router();
+const router: Router = Router()
 
-router.post('/', async (req, res) => {
-  const project = new Project(req.body);
-  await project.save();
-  res.status(201).json(project);
-});
+router.post('/',
+  body('name')
+    .notEmpty().withMessage('El nombre del proyecto es obligatorio')
+    .isLength({ max: 200 }).withMessage('El nombre es demasiado largo'),
+  body('description')
+    .optional()
+    .isLength({ max: 1000 }).withMessage('La descripción es demasiado larga'),
+  handleInputErrors,
+  ProjectController.createProject
+)
 
-router.get('/', async (req, res) => {
-  const projects = await Project.find();
-  res.json(projects);
-});
+router.get('/', ProjectController.getAllProjects)
 
-export default router;
+router.get('/:projectId',
+  param('projectId').isMongoId().withMessage('ID de proyecto no válido'),
+  handleInputErrors,
+  ProjectController.getProjectById
+)
+
+router.delete('/:projectId', param('projectId').isMongoId(), handleInputErrors, ProjectController.deleteProject)
+
+export default router
