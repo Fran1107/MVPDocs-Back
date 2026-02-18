@@ -83,7 +83,9 @@ export class TagController {
         try {
             const { tagId } = req.params;
 
-            const tag = await Tag.findById(tagId).lean();
+            const tag = await Tag.findById(tagId)
+                .populate({ path: 'categoryId', model: Category, select: 'name color' })
+                .lean();
 
             if (!tag) {
                 return res.status(404).json({ message: 'Tag no encontrado' });

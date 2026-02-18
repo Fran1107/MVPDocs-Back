@@ -25,7 +25,7 @@ router.get('/:tagId',
   handleInputErrors,
   TagController.getTagById);
 
-router.put('/:tagId',
+router.patch('/:tagId',
   param('tagId').isMongoId().withMessage('El ID del tag es inválido'),
   body('name').optional().isString().withMessage('El nombre debe ser una cadena de texto'),
   body('color').optional().isHexColor().withMessage('El color debe ser un color hexadecimal'),
