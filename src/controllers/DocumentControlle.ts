@@ -1,6 +1,7 @@
 import type { Request, Response } from 'express';
 import { Document } from '../models/Document.js';
 import { convertToMarkdown } from '../services/DocumentConverter.js';
+import { Quote } from '../models/Quote.js';
 
 export class DocumentController {
   
@@ -122,6 +123,26 @@ export class DocumentController {
       });
     } catch (error) {
       res.status(500).json({ error: 'Error al verificar integridad' });
+    }
+  };
+
+  // DELETE /api/documents/:id
+  static deleteDocument = async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params;
+      
+      const document = await Document.findById(id);
+      if (!document) return res.status(404).json({ error: 'Documento no encontrado' });
+
+      // Eliminación en cascada: borramos todas las citas de este documento
+      await Quote.deleteMany({ documentId: id });
+      
+      // Borramos el documento
+      await document.deleteOne();
+
+      res.json({ message: 'Documento y sus citas eliminados correctamente' });
+    } catch (error) {
+      res.status(500).json({ error: 'Error al eliminar el documento' });
     }
   };
 }
