@@ -1,6 +1,7 @@
 import type { Request, Response } from 'express'
 import { Project } from '../models/Project.js'
 import { Document } from '../models/Document.js'
+import { Quote } from '../models/Quote.js';
 
 export class ProjectController {
   // Crear un nuevo proyecto 
@@ -57,4 +58,27 @@ export class ProjectController {
       res.status(500).json({ error: 'Error al obtener el proyecto' });
     }
   }
+
+  // DELETE /api/projects/:projectId
+  static deleteProject = async (req: Request, res: Response) => {
+    try {
+      const { projectId } = req.params;
+      const project = await Project.findById(projectId);
+      
+      if (!project) return res.status(404).json({ error: 'Proyecto no encontrado' });
+
+      // Buscamos los documentos del proyecto para limpiar sus citas
+      const docs = await Document.find({ projectId });
+      const docIds = docs.map(d => d._id);
+
+      // Borramos en cascada
+      await Quote.deleteMany({ documentId: { $in: docIds } });
+      await Document.deleteMany({ projectId });
+      await project.deleteOne();
+
+      res.json({ message: 'Proyecto y todos sus datos asociados eliminados' });
+    } catch (error) {
+      res.status(500).json({ error: 'Error al eliminar el proyecto' });
+    }
+  };
 }

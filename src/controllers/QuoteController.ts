@@ -35,7 +35,7 @@ export class QuoteController {
     } catch (error) {
       res.status(500).json({ error: 'Error al crear la cita' });
     }
-  };
+  }
 
   static getQuotesByDocument = async (req: Request, res: Response) => {
     try {
@@ -45,5 +45,19 @@ export class QuoteController {
     } catch (error) {
       res.status(500).json({ error: 'Error al obtener citas' });
     }
-  };
+  }
+
+  // DELETE /api/quotes/:id
+  static deleteQuote = async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params;
+      const quote = await Quote.findByIdAndDelete(id);
+
+      if (!quote) return res.status(404).json({ error: 'Cita no encontrada' });
+
+      res.json({ message: 'Cita eliminada correctamente' });
+    } catch (error) {
+      res.status(500).json({ error: 'Error al eliminar la cita' });
+    }
+  }
 }
