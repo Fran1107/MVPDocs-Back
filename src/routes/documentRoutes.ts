@@ -1,39 +1,63 @@
 import { Router } from 'express';
 import multer from 'multer';
-import { Document } from '../models/Document.js';
-import { convertToMarkdown } from '../services/DocumentConverter.js';
+import { body, param, query } from 'express-validator';
+import { handleInputErrors } from '../middlewares/validation.js';
+import { DocumentController } from '../controllers/DocumentControlle.js';
 
 const router: Router = Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
-router.post('/upload', upload.single('file'), async (req, res) => {
-  try {
-    const { projectId, title } = req.body;
-    const file = req.file;
+/**
+ * @route POST /api/documents/upload
+ * @desc Sube un archivo y lo convierte a Markdown
+ */
+router.post('/upload', 
+    upload.single('file'), 
+    body('projectId').isMongoId().withMessage('ID de proyecto no válido'),
+    handleInputErrors,
+    DocumentController.uploadDocument
+);
 
-    if (!file) return res.status(400).json({ error: 'No file uploaded' });
+/**
+ * @route GET /api/documents
+ * @desc Obtiene lista de documentos con paginación
+ */
+router.get('/',
+    query('page').optional().isInt({ min: 1 }),
+    query('limit').optional().isInt({ min: 1 }),
+    handleInputErrors,
+    DocumentController.getAllDocuments
+);
 
-    const extension = file.originalname.split('.').pop() as any;
-    const { markdown, hash } = await convertToMarkdown(file.buffer, extension);
+/**
+ * @route GET /api/documents/:id
+ * @desc Detalle de un documento (incluye el contenido Markdown)
+ */
+router.get('/:id',
+    param('id').isMongoId().withMessage('ID de documento no válido'),
+    handleInputErrors,
+    DocumentController.getDocumentById
+);
 
-    const newDoc = new Document({
-      title: title || file.originalname,
-      originalFilename: file.originalname,
-      originalFormat: extension,
-      markdownContent: markdown,
-      contentHash: hash,
-      projectId,
-      metadata: {
-        characterCount: markdown.length,
-        wordCount: markdown.split(/\s+/).length,
-      }
-    });
+/**
+ * @route PATCH /api/documents/:id/summary
+ * @desc Actualiza el resumen generado por la IA en el frontend
+ */
+router.patch('/:id/summary',
+    param('id').isMongoId().withMessage('ID de documento no válido'),
+    body('summary').notEmpty().withMessage('El resumen no puede estar vacío'),
+    handleInputErrors,
+    DocumentController.updateDocumentSummary
+);
 
-    await newDoc.save();
-    res.status(201).json(newDoc);
-  } catch (error) {
-    res.status(500).json({ error: 'Error processing document' });
-  }
-});
+/**
+ * @route GET /api/documents/:id/integrity
+ * @desc Verifica el hash del documento
+ */
+router.get('/:id/integrity',
+    param('id').isMongoId().withMessage('ID de documento no válido'),
+    handleInputErrors,
+    DocumentController.checkIntegrity
+);
 
 export default router;

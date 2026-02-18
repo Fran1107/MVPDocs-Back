@@ -1,44 +1,25 @@
 import { Router } from 'express';
-import { Quote } from '../models/Quote.js';
-import { Document } from '../models/Document.js';
-import { calculateRawOffsets } from '../services/OffsetCalculator.js';
+import { QuoteController } from '../controllers/QuoteController.js';
+import { body, param } from 'express-validator';
+import { handleInputErrors } from '../middlewares/validation.js';
 
 const router: Router = Router();
 
-router.post('/', async (req, res) => {
-  try {
-    const { documentId, plainStart, plainEnd, selectedText, tags, color, memo, contextBefore, contextAfter } = req.body;
+router.post('/',
+    body('documentId').isMongoId().withMessage('ID de documento no válido'),
+    body('plainStart').isInt({ min: 0 }).withMessage('plainStart debe ser un número positivo'),
+    body('plainEnd').isInt({ min: 0 }).withMessage('plainEnd debe ser un número positivo'),
+    body('selectedText').notEmpty().withMessage('El texto seleccionado es requerido'),
+    body('color').isHexColor().withMessage('El color debe ser un formato hexadecimal válido'),
+    body('tags').isArray().withMessage('Tags debe ser un arreglo de IDs'),
+    handleInputErrors,
+    QuoteController.createQuote
+);
 
-    // 1. Buscar el documento para obtener el Markdown original
-    const doc = await Document.findById(documentId);
-    if (!doc) return res.status(404).json({ error: 'Documento no encontrado' });
-
-    // 2. Calcular los offsets reales (raw) sobre el Markdown [cite: 48, 50]
-    const { rawStart, rawEnd } = calculateRawOffsets(doc.markdownContent, plainStart, plainEnd);
-
-    // 3. Crear la cita con la estrategia de doble offset [cite: 28, 32]
-    const newQuote = new Quote({
-      documentId,
-      position: {
-        rawStart,
-        rawEnd,
-        plainStart,
-        plainEnd,
-        selectedText,
-        contextBefore,
-        contextAfter
-      },
-      tags,
-      color,
-      memo
-    });
-
-    await newQuote.save();
-    res.status(201).json(newQuote);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Error al crear la cita' });
-  }
-});
+router.get('/document/:documentId',
+    param('documentId').isMongoId().withMessage('ID de documento no válido'),
+    handleInputErrors,
+    QuoteController.getQuotesByDocument
+);
 
 export default router;
