@@ -15,7 +15,7 @@ export class ProjectController {
   }
 
   // Obtener todos los proyectos 
- static getAllProjects = async (req: Request, res: Response) => {
+  static getAllProjects = async (req: Request, res: Response) => {
     try {
       const projects = await Project.find().lean(); // .lean() mejora el rendimiento para lectura
 
@@ -44,15 +44,27 @@ export class ProjectController {
     }
   }
 
-  // Obtener un proyecto por ID (Útil para el dashboard)
+  // Obtener un proyecto por ID con sus documentos embebidos
   static getProjectById = async (req: Request, res: Response) => {
     try {
       const { projectId } = req.params;
-      const project = await Project.findById(projectId);
+      const project = await Project.findById(projectId).lean();
       if (!project) {
         return res.status(404).json({ error: 'Proyecto no encontrado' });
       }
-      res.json(project);
+
+      const documents = await Document.find({ projectId: project._id })
+        .select('title createdAt')
+        .lean();
+
+      res.json({
+        ...project,
+        documents: documents.map(doc => ({
+          id: doc._id,
+          title: doc.title,
+          createdAt: doc.createdAt,
+        }))
+      });
     } catch (error) {
       res.status(500).json({ error: 'Error al obtener el proyecto' });
     }
