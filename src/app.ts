@@ -5,6 +5,7 @@ import projectRoutes from './routes/projectRoutes.js'
 import documentRoutes from './routes/documentRoutes.js'
 import quoteRoutes from './routes/quoteRoutes.js'
 import tagRoutes from './routes/tagRoutes.js'
+import chatRoutes from './routes/chatRoutes.js'
 
 connectDB()
 const app: Application = express()
@@ -16,6 +17,7 @@ app.use('/api/projects', projectRoutes)
 app.use('/api/documents', documentRoutes)
 app.use('/api/quotes', quoteRoutes)
 app.use('/api/tags', tagRoutes)
+app.use('/api/chat', chatRoutes)
 
 app.get('/api', (req, res) => {
     res.send('Respuesta desde el servidor')
