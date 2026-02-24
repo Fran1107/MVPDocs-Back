@@ -22,10 +22,6 @@ export class ChatController {
                 .limit(Number(limit))
                 .sort({ createdAt: -1 });
 
-            if (messages.length === 0) {
-                return res.status(404).json({ error: 'No messages found' });
-            }
-
             res.status(200).json(messages);
         } catch (error) {
             res.status(500).json({ error: error.message });
