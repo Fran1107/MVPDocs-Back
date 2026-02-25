@@ -15,12 +15,12 @@ export class ChatController {
 
     static async getMessages(req: Request, res: Response) {
         try {
-            const { projectId, quoteId, limit = 30 } = req.query;
+            const { projectId, quoteId, documentId, limit = 30 } = req.query;
 
-            const messages = await ChatMessage.find({ projectId, quoteId })
+            const messages = await ChatMessage.find({ projectId, quoteId, documentId })
                 .select('-projectId -quoteId -documentId -__v')
                 .limit(Number(limit))
-                .sort({ createdAt: -1 });
+                .sort({ createdAt: 1 });
 
             res.status(200).json(messages);
         } catch (error) {
