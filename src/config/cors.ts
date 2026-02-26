@@ -22,5 +22,6 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => c
         }
 
         return callback(null, true);
-    }
+    },
+    credentials: true
 });
