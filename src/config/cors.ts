@@ -1,7 +1,7 @@
 import cors from 'cors';
 
 const FRONTEND_URLS = process.env.FRONTEND_URL
-    ? process.env.FRONTEND_URL.split(',')
+    ? process.env.FRONTEND_URL.split(',').map(url => url.trim()) 
     : [];
 
 const ACCEPTED_ORIGINS = [
