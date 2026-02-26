@@ -11,7 +11,7 @@ const ACCEPTED_ORIGINS = [
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
     origin: (origin, callback) => {
-
+ 
         if (!origin) {
             return callback(null, true);
         }
@@ -22,6 +22,5 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => c
         }
 
         return callback(null, true);
-    },
-    credentials: true
+    }
 });
