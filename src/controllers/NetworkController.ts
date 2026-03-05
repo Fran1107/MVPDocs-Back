@@ -54,7 +54,7 @@ export class NetworkController {
     const network = await Network.findById(id);
     if (!network) return res.status(404).json({ error: 'No existe' });
 
-    // US-02: Optimistic Locking
+    // Optimistic Locking
     if (network.version !== version) {
       return res.status(409).json({ error: 'Conflicto: La red fue modificada por otro usuario' });
     }
@@ -62,7 +62,7 @@ export class NetworkController {
     network.nodes = nodes;
     network.edges = edges;
     network.viewport = viewport;
-    network.version += 1; // Incrementamos la versión
+    network.version += 1; 
 
     await network.save();
     res.json(network);
@@ -71,7 +71,7 @@ export class NetworkController {
   // POST /api/networks/generate-from-project
 static generateFromProject = async (req: Request, res: Response) => {
   try {
-    const { projectId } = req.body;
+    const { projectId, name } = req.body;
 
     // 1. Obtener tags del proyecto
     const tags = await Tag.find({ projectId });
@@ -82,7 +82,7 @@ static generateFromProject = async (req: Request, res: Response) => {
       const angle = (index / tags.length) * 2 * Math.PI;
       return {
         id: tag._id.toString(),
-        type: 'tagNode', // Debe coincidir con el nombre definido en el front
+        type: 'tagNode', 
         position: { 
           x: Math.cos(angle) * radius, 
           y: Math.sin(angle) * radius 
@@ -96,9 +96,12 @@ static generateFromProject = async (req: Request, res: Response) => {
       };
     });
 
+    // 3. Crear la red con el nombre proporcionado o uno por defecto
+    const defaultName = `Red Automática - ${new Date().toLocaleDateString('es-AR')}`;
+
     const network = new Network({
       projectId,
-      name: `Red Automática - ${new Date().toLocaleDateString()}`,
+      name: `${name || defaultName} - ${new Date().toLocaleDateString('es-AR')}`,
       nodes,
       edges: [],
       version: 1
@@ -121,4 +124,71 @@ static generateFromProject = async (req: Request, res: Response) => {
       res.status(500).json({ error: 'Error al obtener la red' });
     }
   };
+
+  // GET /api/networks/project/:projectId
+    static getNetworksByProject = async (req, res) => {
+        try {
+            const { projectId } = req.params;
+            const networks = await Network.find({ projectId }).sort({ updatedAt: -1 });
+            
+            // Mapeamos para enviar conteos listos para la card
+            const formattedNetworks = networks.map(net => ({
+                _id: net._id,
+                name: net.name,
+                projectId: net.projectId,
+                nodesCount: net.nodes.length,
+                edgesCount: net.edges.length,
+                updatedAt: net.updatedAt
+            }));
+
+            res.json(formattedNetworks);
+        } catch (error) {
+            res.status(500).json({ error: 'Error al obtener las redes del proyecto' });
+        }
+    };
+
+    // GET /api/networks/recent
+    // Obtiene las últimas 6 redes modificadas globalmente
+    static getRecentNetworks = async (req, res) => {
+        try {
+            const recent = await Network.find()
+                .sort({ updatedAt: -1 })
+                .limit(6)
+                .populate('projectId', 'name');
+
+            const formatted = recent.map(net => {
+                // Solución al error ts(2339): Asertamos que projectId tiene 'name'
+                const project = net.projectId as unknown as { name: string };
+                
+                return {
+                    _id: net._id,
+                    name: net.name,
+                    projectId: net.projectId,
+                    projectName: project?.name || 'Proyecto desconocido',
+                    nodesCount: net.nodes?.length || 0,
+                    edgesCount: net.edges?.length || 0,
+                    updatedAt: net.updatedAt
+                };
+            });
+            res.json(formatted);
+        } catch (error) {
+            res.status(500).json({ error: 'Error al obtener redes recientes' });
+        }
+    };
+
+    // DELETE /api/networks/:id
+    static deleteNetwork = async (req, res) => {
+        try {
+            const { id } = req.params;
+            const network = await Network.findByIdAndDelete(id);
+            
+            if (!network) {
+                return res.status(404).json({ error: 'Red no encontrada' });
+            }
+
+            res.json({ message: 'Red eliminada correctamente' });
+        } catch (error) {
+            res.status(500).json({ error: 'Error al eliminar la red' });
+        }
+    };
 }

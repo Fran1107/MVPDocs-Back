@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Date } from 'mongoose';
 
 export interface INetwork extends Document {
   projectId: mongoose.Types.ObjectId;
@@ -11,6 +11,7 @@ export interface INetwork extends Document {
     zoom: number;
   };
   version: number; // Para evitar que dos personas pisen el mismo cambio
+  updatedAt: Date
 }
 
 const NetworkSchema = new Schema<INetwork>({

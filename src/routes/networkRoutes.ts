@@ -5,7 +5,10 @@ import { handleInputErrors } from '../middlewares/validation.js';
 
 const router: Router = Router();
 
-// Endpoint de generación automática (Día 1-2) 
+// Endpoint para redes recientes (dashboard)
+router.get('/recent', NetworkController.getRecentNetworks);
+
+// Endpoint de generación automática 
 router.post('/generate-from-project',
   body('projectId').isMongoId().withMessage('ID de proyecto no válido'),
   handleInputErrors,
@@ -20,6 +23,19 @@ router.get('/:id',
 
 router.patch('/:id', NetworkController.updateNetwork);
 
-// Agregá aquí los CRUD básicos (GET listado, PATCH update, DELETE) 
+// Endpoint para obtener redes por proyecto
+router.get('/project/:projectId',
+    param('projectId').isMongoId().withMessage('ID de proyecto no válido'),
+    handleInputErrors,
+    NetworkController.getNetworksByProject
+);
+ 
+ 
+// Endpoint para eliminar una red
+router.delete('/:id',
+    param('id').isMongoId().withMessage('ID de red no válido'),
+    handleInputErrors,
+    NetworkController.deleteNetwork
+);
 
 export default router;
